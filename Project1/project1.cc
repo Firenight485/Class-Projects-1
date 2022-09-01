@@ -14,15 +14,9 @@ int main() {
     //  if the base is less than 2
     if (base <= 9 || base >= 2) {
         //  output for positive
-        while (input > 0) {
+        while (input > 0 || input < 0) {
             split = input % 10;
-            output = output + (split*base);
-            input = input / 10;
-        }
-        //  output for negative
-        while (input < 0) {
-            split = input % 10;
-            output = output + (split*base);
+            output = output + (split*pow(base, 2));
             input = input / 10;
         }
             cout << output << endl;
