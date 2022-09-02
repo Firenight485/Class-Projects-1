@@ -12,18 +12,16 @@ int main() {
     int raise = 0;
     int count = 0;
 
-    cin >> input;
+    cin >> input >> base;
     //  Checks if the base is less than 9 or
     //  if the base is less than 2
-    while (input != 0) {
-        remainder = input%10;
-        reversed_input = reversed_input*10+remainder;
-        input/10;
-    }
-    return reversed_input;
+     while(input != 0) {
+    remainder = input % 10;
+    reversed_input = reversed_input * 10 + remainder;
+    input /= 10;
+  }
 
-    /*temp = input;
-
+    temp = reversed_input;
     while (temp != 0) {
         count++;
         temp /=10;
@@ -34,10 +32,10 @@ int main() {
          * @brief splits and raises the input 
          * 
          */
-        /*while (input > 0) {
-            split = input % 10;
+        while (reversed_input > 0 || reversed_input < 0) {
+            split = reversed_input % 10;
             output = output + split*pow(base, --raise);
-            input = input / 10;
+            reversed_input = reversed_input / 10;
         }
             cout << output << endl;
     }
@@ -45,6 +43,6 @@ int main() {
     //  if the base is less than 2
     if (base > 9 || base < 2) {
         cout << "Base Not Accepted" << endl;
-    }*/
+    }
     return 0;
 }
