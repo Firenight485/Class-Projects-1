@@ -11,38 +11,30 @@ int main() {
     int output = 0;
     int raise = 0;
     int count = 0;
+    int unique_digits = 50;
 
     cin >> input >> base;
-    //  Checks if the base is less than 9 or
-    //  if the base is less than 2
-     while(input != 0) {
+
+     while (input != 0) {
     remainder = input % 10;
     reversed_input = reversed_input * 10 + remainder;
     input /= 10;
-  }
-
+    }
     temp = reversed_input;
     while (temp != 0) {
         count++;
         temp /=10;
     }
     raise = count;
-    if (base < 10 || base > 1) {
-        /**
-         * @brief splits and raises the input 
-         * 
-         */
-        while (reversed_input > 0 || reversed_input < 0) {
+    if (base > 9 || base < 2) {
+        cout << "Base Not Accepted" << endl;
+    } else {
+         while (reversed_input > 0 || reversed_input < 0) {
             split = reversed_input % 10;
             output = output + split*pow(base, --raise);
             reversed_input = reversed_input / 10;
         }
             cout << output << endl;
-    }
-    //  Checks if the base is less than 9 or
-    //  if the base is less than 2
-    if (base > 9 || base < 2) {
-        cout << "Base Not Accepted" << endl;
     }
     return 0;
 }
