@@ -7,6 +7,8 @@ bool IsInteger(double);
 
 bool IsArithmeticOperator(char arithmetic);
 
-bool OperatorToWords(char toword);
+bool OperatorToWords(char toword);bool 
+
+//bool Compute(double l, char o, double r);
 
 #endif // OPERATOR_FUNCTIONS_H_ 

@@ -1,5 +1,7 @@
 //  copyright 2022 Brian Bongermino
 
-bool compute(double l, char o, double r) {
+#include<operator_functions.h>
 
-}
+//bool Compute(double l, char o, double r) {
+   // return 0;
+//}
