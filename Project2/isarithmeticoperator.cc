@@ -1,17 +1,10 @@
 //  Copyright 2022 Brian Bongermino
 
-#include <functions.h>
+#include<operator_functions.h>
 
-bool isoperator(char arithmetic) {
-    if (arithmetic = '+') {
-        return true;
-    } else if (arithmetic = '-') {
-        return true;
-    } else if (arithmetic = '/'){
-        return true;
-    } else if (arithmetic = '*') {
-        return true;
-    } else if (arithmetic = '&') {
+bool IsArithmeticOperator(char arithmetic) {
+    if ((arithmetic == '+') || (arithmetic == '-') || (arithmetic == '*') ||
+    (arithmetic == '%') || (arithmetic == '*')) {
         return true;
     } else {
         return false;

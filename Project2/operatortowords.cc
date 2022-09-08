@@ -1,19 +1,19 @@
-//  copyright 2022 brian bongermino
+//  Copyright 2022 Brian Bongermino
 
-#include<functions.h>
+#include<operator_functions.h>
 
-bool operatortowords(char toword) {
-    if (toword = 'plus') {
-        return '+';
-    } else if (toword = 'minus') {
-        return '-';
-    } else if (toword = 'times') {
-        return '*';
-    } else if (toword = 'divided by') {
-        return '/';
-    } else if (toword = 'modulo'){
-        return '%';
+bool OperatorToWords(char toword) {
+    if (toword == '+') {
+        return "plus";
+    } else if (toword == '-') {
+        return "plus";
+    } else if (toword == '*') {
+        return "times";
+    } else if (toword == '/') {
+        return "divided by";
+    } else if (toword == '%') {
+        return "modulo";
     } else {
-        return '???';
+        return "??";
     }
 }

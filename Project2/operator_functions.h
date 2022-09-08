@@ -1,8 +1,12 @@
 //  Copyright 2022 Brian Bongermino
 
+#ifndef OPERATORFUNCTIONS_H_
+#define OPERATORFUNCTIONS_H_
 
-bool isinteger(double num1);
+bool IsInteger(double);
 
-bool isoperator(char arithmetic);
+bool IsArithmeticOperator(char arithmetic);
 
-bool operatortowords(char toword);
+bool OperatorToWords(char toword);
+
+#endif // OPERATOR_FUNCTIONS_H_ 

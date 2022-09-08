@@ -10,7 +10,7 @@ class TestProgram2:
     """Q & D class to test a student app.
     """
     def __init__(self, test_no):
-        self._app = "./p2"  # name of child proc
+        self._app = "./program2"  # name of child proc
         self._test_no = test_no  # mapping to test info below
         self._expected = [  # expected output from child proc
             "4.7 plus 9.4 equals 14.1\n1.8 minus 4 equals -2.2\n7 times 6 equals 42\n4 divided by 8 equals 0.5\nCould not compute 103.104 modulo 22\n103 modulo 22 equals 15\nUnrecognized operation ^\n-6 modulo 4 equals -2\n2 times 3.63 equals 7.26\nCould not compute 8 divided by 0\n5.25 divided by 2.1 equals 2.5\n"]
