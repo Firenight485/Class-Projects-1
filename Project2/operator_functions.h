@@ -3,12 +3,14 @@
 #ifndef OPERATORFUNCTIONS_H_
 #define OPERATORFUNCTIONS_H_
 
+#include<string>
+
+using std::string;
+
 bool IsInteger(double);
 
 bool IsArithmeticOperator(char arithmetic);
 
-bool OperatorToWords(char toword);bool 
+string OperatorToWords(char ToWord);
 
-//bool Compute(double l, char o, double r);
-
-#endif // OPERATOR_FUNCTIONS_H_ 
+#endif // OPERATORFUNCTIONS_H_

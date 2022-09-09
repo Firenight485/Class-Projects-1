@@ -1,6 +1,9 @@
 //  Copyright 2022 Brian Bongermino
 
 #include<operator_functions.h>
+#include<string>
+
+using std::string;
 
 bool IsInteger(double num1) {
     int trunc = num1;
@@ -21,16 +24,16 @@ bool IsArithmeticOperator(char arithmetic) {
     }
 }
 
-bool OperatorToWords(char toword) {
-    if (toword == '+') {
+string OperatorToWords(char ToWord) {
+    if (ToWord == '+') {
         return "plus";
-    } else if (toword == '-') {
-        return "plus";
-    } else if (toword == '*') {
+    } else if (ToWord == '-') {
+        return "minus";
+    } else if (ToWord == '*') {
         return "times";
-    } else if (toword == '/') {
-        return "divided by";
-    } else if (toword == '%') {
+    } else if (ToWord == '/') {
+        return "divided by"; 
+    } else if (ToWord == '%') {
         return "modulo";
     } else {
         return "??";
