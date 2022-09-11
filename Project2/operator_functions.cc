@@ -44,7 +44,6 @@ string OperatorToWords(char ToWord) {
 bool Compute(const double &x, char arth, const double &y, double &answer) {
     int xi = x;
     int yi = y;
-    
     switch (arth)
     {
     case '+':
