@@ -1,6 +1,7 @@
 //  Copyright 2022 Brian Bongermino
 
 #include<operator_functions.h>
+#include<iostream>
 #include<string>
 
 using std::string;
@@ -39,3 +40,44 @@ string OperatorToWords(char ToWord) {
         return "??";
     }
 }
+
+bool Compute(const double &x, char arth, const double &y, double &answer) {
+    int xi = x;
+    int yi = y;
+    
+    switch (arth)
+    {
+    case '+':
+        answer = (x + y);
+        return true;
+        break;
+    case '-':
+        answer = (x - y);
+        return true;  
+        break;
+    case '*':        
+        answer = (x * y);
+        return true;
+        break;
+    case '/':
+        if (x == 0 || y == 0) {
+            return false;
+        } else {
+            answer = (x /y);
+            return true;
+        }
+        break;
+    case '%':
+        if (xi == 0 || yi == 0){
+            answer = 0;
+            return false;
+        } else if (xi == x && yi == y) {
+            answer = (xi % yi);
+            return true;
+        } 
+        break;
+    default:
+        return false;
+    }
+    return 0;
+} 
