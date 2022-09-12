@@ -9,7 +9,9 @@ using std::cin;
 using std::cout;
 using std::endl;
 
-
+/**
+ * takes in a text file and outputs it in a valid form
+ */
 int main() {
     double x, y, answer;
     char arth;
@@ -17,10 +19,13 @@ int main() {
     input_file >> x >> arth >> y;
     while (input_file.good()) {
         if (Compute(x, arth, y, answer)) {
+            //  outputs valid equations
             cout << x << " " << OperatorToWords(arth) << " " << y << " equals" << " " << answer << endl;
+            // checks if the arithmetic is invalid and outputs it as unrecgonized
     }  else if (IsArithmeticOperator(arth) == false){
         cout << "Unrecognized operation " << arth << endl;
     } else {
+        //  outputs the invalid inputs
         cout << "Could not compute " << x << " " << OperatorToWords(arth) << " " << y << endl;
     }
         input_file >> x >> arth >> y;
