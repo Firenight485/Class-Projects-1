@@ -1,7 +1,8 @@
 //  Copyright 2022 Brian Bongermino
 //  contains all functions used in program 2
-#ifndef OPERATORFUNCTIONS_H_
+#ifndef OPERATOR_FUNCTIONS_H_
 #define OPERATORFUNCTIONS_H_
+
 
 #include<string>
 #include<cmath>
@@ -44,4 +45,4 @@ string OperatorToWords(char ToWord);
 bool Compute(const double &x, char arth, const double &y, double &answer);
 
 
-#endif // OPERATORFUNCTIONS_H_
+#endif  //  OPERATOR_FUNCTIONS_H_
