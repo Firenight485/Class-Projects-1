@@ -18,7 +18,7 @@ bool IsInteger(double num1) {
 
 bool IsArithmeticOperator(char arithmetic) {
     if ((arithmetic == '+') || (arithmetic == '-') || (arithmetic == '*') ||
-    (arithmetic == '%') || (arithmetic == '*')) {
+    (arithmetic == '%') || (arithmetic == '*') || (arithmetic == '/')) {
         return true;
     } else {
         return false;
