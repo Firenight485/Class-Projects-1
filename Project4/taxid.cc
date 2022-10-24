@@ -6,7 +6,6 @@ using std::string;
 
 // initialize the mask to "XXXXX####"
 string TaxId::mask_ = "XXXXX####";
-string TaxId::id_;
 
 // implement the TaxId class' member functions
 
@@ -19,9 +18,9 @@ TaxId::TaxId(string id) {
 }
 
 void TaxId::SetMask(string m) {
-    if(m.length() > 9 || m.length() < 9) {
+    if (m.length() > 9 || m.length() < 9) {
         m = mask_;
-    } if ((mask_.length() == 9 &&  
+    } else if ((mask_.length() == 9 &&
     m.find("#") != std::string::npos) || m.find("X") !=
     std::string::npos) {
         mask_ = m;
@@ -35,37 +34,38 @@ string TaxId::GetMask() {
 }
 
 void TaxId::SetId(const string &id) {
-    int counter;
-    int counter2 = 0;
-    
+    int counter = 0;
+     std::string idtemp;
+
+
     if (id.length() == 9) {
         for (int i = 0; i < 9; ++i) {
             if (id[i] >= '0' && id[i] <= '9') {
                 counter++;
-            } 
-        }   
+            }
+        }
     } else if (id.length() == 11) {
             counter = 0;
                 for (int i = 0; i < 11; ++i) {
-                    if (id[3] == '-' && id[6] == '-'){
-                    if(id[i] >= '0' && id[i] <= '9') {
+                    if ((id[3] == '-' && id[6] == '-') && (id[i] >= '0' && id[i] <= '9')) {
                         counter++;
                     }
-                } 
                 }
     }
     if (counter == 9) {
             id_ = id;
-       } else if (counter == 11){
+       } else if (counter == 11) {
             id_ = id;
        }
+    id_.erase(remove(id_.begin(), id_.end(), '-'), id_.end());
+
 }
 
-string TaxId::GetId() {
-    id_.erase(remove(id_.begin(), id_.end(), '-'), id_.end());
+string TaxId::GetId() const {
+   // id_.erase(remove(id_.begin(), id_.end(), '-'), id_.end());
+    std::string idmask = id_;
     for (int i = 0; i < 9; ++i) {
-    std::replace(mask_.begin(), mask_.end(), '#', id_[i]);
     }
-    std::cout << mask_;
-    return id_;
+   // std::cout << idmask;
+   return id_;
 }

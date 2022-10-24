@@ -8,7 +8,7 @@ using std::string;
 // without an initial 9-digit string argument. The tax id should default
 // to 0000000. The constructor should be explicit.
 class TaxId {
-  public:
+ public:
     explicit TaxId(string id = "000000000");
 // SetMask static function
 // preconditions: The function will be sent a string which should contain
@@ -18,10 +18,10 @@ class TaxId {
 //                 argument sent if the argument is exactly nine characters
 //                 long and only contains X and # as characters. Otherwise,
 //                 mask will remain unchanged
-   static void SetMask(string mask);
+  static void SetMask(string mask);
 // GetMask static function
 // the function takes no parameters and returns the mask string
-    static string GetMask();
+  static string GetMask();
 // SetId function
 // preconditions: The function will be sent a string for the tax id. Excepted
 //                formats are "#########" or "###-##-####"
@@ -31,18 +31,17 @@ class TaxId {
 //                 updated.
 //                 If the argument does not meet one of the accepted formats
 //                 the id data member should not be changed.
-    static void SetId(const string &id);
+  void SetId(const string &id);
 // GetId function
 // the function should return a string with the id data member masked using
 // the format specified by the static mask data member.
 // For example, if the id data member is "123456789" and the static mask
 // data member is "XXXXX####" then the GetId function should return the string
 // "XXXXX6789"
-   static string GetId();
-    
-  static string mask_;
-  static string id_;
+  string GetId() const;
 
+  static string mask_;
+  string id_;
 };
 
 #endif  // _TAXID_H_
