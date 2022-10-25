@@ -1,3 +1,5 @@
+//  copyright 2022 Brian Bongermino
+
 #ifndef _TAXID_H_
 #define _TAXID_H_
 

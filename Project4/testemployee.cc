@@ -7,26 +7,25 @@ using std::cout;
 using std::endl;
 
 int main() {
-  const Employee e;
+  const Employee e; 
   if ( e.GetHoursPerWeek() == 40 && e.GetPayType() == "hourly"
        && e.GetTaxId() == "XXXXX9999" )
     cout << "Passed default constructor / accessor function test" << endl;
   else
     cout << "Failed default constructor / accessor function test" << endl;
-
+  
   TaxId::SetMask("#########");
   if ( e.GetTaxId() == "XXXXX9999" )
     cout << "Passed GetTaxId masking test" << endl;
   else
     cout << "Failed GetTaxId masking test" << endl;
-
+  
   Employee e2("123456789",1,37.5);
   if ( e2.GetHoursPerWeek() == 37.5 && e2.GetPayType() == "salaried"
        && e2.GetTaxId() == "XXXXX6789" )
     cout << "Passed initialize constructor / accessor function test" << endl;
   else
     cout << "Failed initialize constructor / accessor function test" << endl;
-
   e2.SetHoursPerWeek(30.25);
   if ( e2.GetHoursPerWeek() == 30.25)
     cout << "Passed hours per week mutator / accessor test 1" << endl;
