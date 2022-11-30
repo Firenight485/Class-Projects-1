@@ -9,6 +9,10 @@ TestFractionMultiply : fraction.o fraction.h TestFractionMultiply.cc
 	g++ -Wall -I . TestFractionMultiply.cc fraction.o
 	./a.out
 
+TestFractionEquality : fraction.o fraction.h TestFractionEquality.cc
+	g++ -Wall -I . TestFractionEquality.cc fraction.o
+	./a.out
+
 TestFractionMultiplyOperator : fraction.o fraction.h TestFractionMultiplyOperator.cc
 	g++ -Wall -I . TestFractionMultiplyOperator.cc fraction.o
 	./a.out
